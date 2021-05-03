@@ -1,0 +1,85 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Fish{% endblock title %}
+{% block main-content1 %}
+<div class="container my-5">
+ <div class="row">
+     
+  <div class="col-sm-3">
+   
+    <div class="list-group">
+        <a href="{% url 'allproducts' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true">All Products </a>
+        <a href="{% url 'allproductsdata' 'Beans' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Beans </a>
+        <a href="{% url 'allproductsdata' 'Daal' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Daal </a>
+        <a href="{% url 'allproductsdata' 'Disposable Stuff' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Disposable Stuff </a>
+        <a href="{% url 'allproductsdata' 'Dry Food' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Dry Food </a>
+        <a href="{% url 'allproductsdata' 'Whole Fish' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Whole Fish </a>
+        <a href="{% url 'allproductsdata' 'Cleaned Block Fish' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Cleaned Block Fish </a>
+        <a href="{% url 'allproductsdata' 'Keema' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Keema </a>
+        <a href="{% url 'allproductsdata' 'Dry Fish' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Dry Fish </a>
+        <a href="{% url 'allproductsdata' 'Flour' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Flour </a>
+        <a href="{% url 'allproductsdata' 'Frozen Food' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Frozen Food </a>
+        <a href="{% url 'allproductsdata' 'Ghee' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Ghee </a>
+        <a href="{% url 'allproductsdata' 'Meat' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Meat </a>
+        <a href="{% url 'allproductsdata' 'Oil' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Oil </a>
+        <a href="{% url 'allproductsdata' 'Rice' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Rice </a>
+        <a href="{% url 'allproductsdata' 'Whole Spices' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Whole Spices </a>
+        <a href="{% url 'allproductsdata' 'Ground Spice' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Ground Spice </a>
+        <a href="{% url 'allproductsdata' 'Sugar' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Sugar </a>
+        <a href="{% url 'allproductsdata' 'Sundries' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Sundries </a>
+        <a href="{% url 'allproductsdata' 'Vegetable' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Vegetable </a>
+        <a href="{% url 'allproductsdata' 'Pickle' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Pickle </a>
+        <a href="{% url 'allproductsdata' 'Bangladeshi Snacks' %}" class="list-group-item list-group-icon-action" 
+        aria-current="true"> Bangladeshi Snacks </a>
+        
+
+    </div>
+
+
+  </div>
+
+
+  <div class="col-sm-8 offset-sm-0.5">
+  
+    <div class="row">
+        {% for i in product %}
+        <div class="col-sm-4 text-cennter mb-4">
+            <a href="{% url 'product-detail' i.id %}" class="btn">
+                <div class="item">
+                    <img src="{{ i.product_image.url }}" alt="" height="300"  class="abcd" style="padding:10%;">
+                    <div class="fx-bold">{{i.title}}</div>
+                    <div class="fx-bold"> $ {{i.discounted_price}}
+                        <small class="fw-light text-decoration-line-through">{{i.selling_price}}</small>
+                    </div>
+                </div>   
+            </a>
+    </div>
+    {% endfor %}
+    </div>
+
+
+  </div>
+ </div>
+</div>
+{% endblock main-content1 %}
