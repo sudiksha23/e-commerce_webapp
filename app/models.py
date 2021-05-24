@@ -52,7 +52,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=100)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=3)
     product_image = models.ImageField(upload_to='productimg')
-    quantity_pr_price = models.PositiveIntegerField(default=1)
+    quantity_pr_price = models.CharField(max_length=30)
     def __str__(self):
         return str(self.id)
 

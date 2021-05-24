@@ -25,7 +25,7 @@ SECRET_KEY = 'i_-m22-p^gk)3we!v*nhc&((p%7w7^^sdvv07nbwwk95292lg='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ausbangla-enterprise.herokuapp.com']
+ALLOWED_HOSTS = ["https://ausbangla-enterprise.herokuapp.com/"]
 #ALLOWED_HOSTS = []
 
 

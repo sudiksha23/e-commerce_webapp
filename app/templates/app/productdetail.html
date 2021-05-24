@@ -12,6 +12,7 @@
    <hr>
    <p>{{product.description}}</p> <br>
    <h4>$ {{product.discounted_price}} <small class="fw-light text-decoration-line-through">$ {{product.selling_price}}</small></h4> <br>
+   <h5>{{product.quantity_pr_price}}</h5> <br>
 {% if request.user.is_authenticated %}
 {% if item_already_in_cart %}
     <a href="{% url 'showcart' %}" class="btn btn-warning shadow px-5 py-2 ps-4">Go to cart</a>
@@ -32,7 +33,7 @@
 
    <h5 class="mt-5">Available Offers</h5>
    <ul>
-    <li>Partner Offer $50 Flipkart Gift Card on Every 1000th Transaction</li>
+    <li>Partner Offer $50 Gumtree Gift Card on Every 1000th Transaction</li>
    </ul>
   </div>
  </div>

@@ -64,7 +64,7 @@
  <!-- Slider 1 -->
  <div class="owl-carousel" id="slider1">
  {% for b in show %}
-  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src="{{b.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">{{ b.discounted_price }}</span></div></a>
+  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src="{{b.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">${{ b.discounted_price }}</span></div></a>
   {% endfor %}
  
 </div>
@@ -72,12 +72,10 @@
 
 <div class="scroll_div_out" style="margin:-60px 0 15px 0;
 height:40px;
-border-top:1px solid #9fafd0;
-border-bottom:1px solid #9fafd0;
-padding:3px 10px 3px 10px;">
+padding:3px 10px 3px 40px;">
   <div class="scroll_div_in" style="border-top:1px solid #9fafd0;
 	border-bottom:1px solid #9fafd0;">
-    <marquee behavior="scroll" scrollamount="3" scrolldelay="4">
+    <marquee behavior="scroll" scrollamount="3" scrolldelay="4" style="margin-bottom: 20%;">
     <img src="{% static 'app/images/offer.jpg' %}" alt="" />
     <img src="{% static 'app/images/offer2.jpg' %}" alt=""  style="padding-left:300px;"/>
     <img src="{% static 'app/images/offer3.jpg' %}" alt=""  style="padding-left:300px;"/>
